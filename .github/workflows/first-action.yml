@@ -1,11 +1,20 @@
-name: First Workflow
+name: Advanced Practice Workflow
 
 on: push
 
 jobs:
-  build:
+  test-job:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print message
-        run: echo "Hello, GitHub Actions!"
+      - name: Step 1 - Print Message
+        run: echo "Workflow started!"
+
+      - name: Step 2 - Show Date
+        run: date
+
+      - name: Step 3 - List Files
+        run: ls
+
+      - name: Step 4 - Run Python Script
+        run: python script.py
