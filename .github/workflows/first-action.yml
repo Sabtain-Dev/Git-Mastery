@@ -7,14 +7,22 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Step 1 - Print Message
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Print Message
         run: echo "Workflow started!"
 
-      - name: Step 2 - Show Date
+      - name: Show Date
         run: date
 
-      - name: Step 3 - List Files
+      - name: List Files
         run: ls
 
-      - name: Step 4 - Run Python Script
+      - name: Run Python Script
         run: python script.py
