@@ -1,4 +1,4 @@
 app:
   name: GitPractice
-  version: 1.1
-  feature: enabled
+  version: 1.1.1
+  feature: fixed
